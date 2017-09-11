@@ -1,0 +1,60 @@
+<div class="dice" [ngSwitch]="diceNumber" [ngClass]="{'spinner': loading }">
+    <div class="face-1" *ngSwitchCase="1">
+        <div class="point"></div>
+    </div>
+    <div class="face-2" *ngSwitchCase="2">
+        <div class="point"></div>
+        <div class="point"></div>
+    </div>
+    <div class="face-3" *ngSwitchCase="3">
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+    </div>
+    <div class="face-4" *ngSwitchCase="4">
+        <div class="column">
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+        <div class="column">
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+    </div>
+    <div class="face-5" *ngSwitchCase="5">
+        <div class="column">
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+        <div class="column">
+            <div class="point"></div>
+        </div>
+        <div class="column">
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+    </div>
+    <div class="face-6" *ngSwitchCase="6">
+        <div class="column">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+        <div class="column">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+    </div>
+    <div class="face-1" *ngSwitchDefault>
+        <div class="point"></div>
+    </div>
+</div>
+
+<br>
+
+<p>{{penalty}}</p>
+
+<div class="dice">
+  <button (click)="getDice()" class="button" type="button" name="button">Tap!</button>
+</div>
